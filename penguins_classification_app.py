@@ -200,10 +200,11 @@ if selected=='Data':
     st.markdown('- Comapring metrics of classification models using Confusion Matrix')
     st.markdown('- Finally selecting best model with best parameters using GridSearchCV.And Saving that model.')
     st.write('You can see Python code for Machine Learning [Here](https://github.com/TRGanesh/penguins_classification1/blob/main/penguins_DTClassification.ipynb)')
-st.markdown(''' <style> .font{font-size:30px;
-            font-weight:bold;
+    st.write('You can see Python code for Streamlit web page [Here](https://github.com/TRGanesh/penguins_classification1/blob/main/penguins_classification_app.py)')
+st.markdown(''' <style> .font{font-size:30px;font-weight:bold;
             font-family:'Copper Black';
             color:#FF9633;}</style>''',unsafe_allow_html=True)
+        
 
 # CREATING A PAGE FOR MODEL PREDICTION    
 if selected=='Project':   
