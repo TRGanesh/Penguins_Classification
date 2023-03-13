@@ -62,7 +62,7 @@ if selected=='Home':
         with text_column:
             st.header(':blue[Brief Introduction about Machine Learning]')
             st.write('''Machine Learning can be defined with many definitions.One way to define it is "The field of study that gives computers the ability to learn without being explicitly programmed".Machine learning is programming computers to optimize a performance criterion using example data or past experience .We have a model defined up to some parameters, and learning is the execution of a computer program to optimize the parameters of the model using the training data or past experience.''')
-            st.write("There are several types of machine learning, including supervised learning, unsupervised learning, and reinforcement learning.Supervised learning involves training a model on labeled data, while unsupervised learning involves training a model on unlabeled data. Reinforcement learning involves training a model through trial and error.Machine learning is used in a wide variety of applications, including image and speech recognition, natural language processing, and recommender systems.")
+            st.write("There are several types of machine learning, including **supervised learning**, **unsupervised learning**, and **reinforcement learning**.Supervised learning involves training a model on labeled data, while unsupervised learning involves training a model on unlabeled data. Reinforcement learning involves training a model through trial and error.Machine learning is used in a wide variety of applications, including image and speech recognition, natural language processing, and recommender systems.")
         with image_column:
             st.image(Image.open('ml_image.png.jpeg'),width=500) 
             
@@ -138,12 +138,11 @@ df = pd.read_csv('penguins_df.csv')
 if selected=='Data':
     # TITLE
     st.title(':blue[Palmer Penguins Dataset]')
-    #st.write(df.sample(250,ignore_index=True))
-    st.dataframe(dataframe_explorer(df),use_container_width=True)
-    st.write('- - -')
+    #st.write(df.sample(250,ignore_index=True)
     st.write('''Data were collected and made available by Dr. Kristen Gorman and the Palmer Station, Antarctica LTER, a member of the Long Term Ecological Research Network.
     Gorman KB, Williams TD, Fraser WR (2014) Ecological Sexual Dimorphism and Environmental Variability within a Community of Antarctic Penguins (Genus Pygoscelis).''')
-    
+    st.dataframe(dataframe_explorer(df),use_container_width=True)
+    st.write('- - -)
     # DISPLAYING FEATURES/COLUMNS IN DATASET
     st.markdown("<p class='font'>Features of Data</p>",unsafe_allow_html=True)
     st.write(' ')
