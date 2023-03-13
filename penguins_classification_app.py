@@ -52,7 +52,7 @@ selected = streamlit_option_menu.option_menu(menu_title=None,options=['Intro','D
             "nav-link-selected": {"background-color": 'blue'}
         })
 # CREATING HOME PAGE    
-if selected=='Home':
+if selected=='Intro':
     st.title(':blue[Machine Learning]')
     
     # CONTAINER TO DISPLAY TEXT AND IMAGE ABOUT BRIEF INTRO OF MACHINE LEARNING
