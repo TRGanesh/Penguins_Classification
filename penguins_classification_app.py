@@ -147,13 +147,13 @@ if selected=='Data':
     # DISPLAYING FEATURES/COLUMNS IN DATASET
     st.markdown("<p class='font'>Features of Data</p>",unsafe_allow_html=True)
     st.write(' ')
-    st.write('1. Species : penguin species (Chinstrap, Adelie, or Gentoo)')
-    st.write('2. Island :  island name (Dream, Torgersen, or Biscoe) in the Palmer Archipelago (Antarctica)')
-    st.write('3. Culmen Length (in mm)')
-    st.write('4. Culmen Depth (in mm)')
-    st.write('5. Flipper Length (in mm)')
-    st.write('6. Body Mass (in grams)')  
-    st.write('7. Sex')  
+    st.markdown('- Species : penguin species (Chinstrap, Adelie, or Gentoo)')
+    st.markdown('- Island :  island name (Dream, Torgersen, or Biscoe) in the Palmer Archipelago (Antarctica)')
+    st.markdown('- Culmen Length (in mm)')
+    st.markdown('- Culmen Depth (in mm)')
+    st.markdown('- Flipper Length (in mm)')
+    st.markdown('- Body Mass (in grams)')  
+    st.markdown('- Sex')  
     st.write('- - -')
     
     # DISPLAYING IMAGES OF DIFFERENT SPECIES OF PENGUINS 
@@ -189,8 +189,17 @@ if selected=='Data':
             st.subheader(':green[Flipper Length]')
             st.write("Flipper's are wings of penguins.In above image,we can see how the flipper length is measured")
     st.write('- - -')
+    st.markdown("<p class='font'>Procedure Followed</p>",unsafe_allow_html=True)
     st.write('On taking features of Penguin that are Island,Culmen Length,Culmen Depth,Flipper Length,Body Mass,Sex of Penguin,,biologists had found their species.We have predefined data about features of penguin and their species.I build a Machine Learning Classification model using Decision Tree Algorithm.In Prediction page,you can give inputs and see the prediction.')        
-
+    st.markdown('- I downloaded the dataset and loaded it in,by using Pandas.')
+    st.markdown('- Using Python Libraries Numpy,Matplotlib and Seaborn,I did data exploration,made some interactive plots using Plotly.')
+    st.markdown('- Importing required libraries from Scikit Learn Library.')
+    st.markdown("- Splitting the dataset's features(X) and target(y) into training and testing data.")
+    st.markdown('- Data Preprocessing that involves encoding the categorical features and scaling all features.')       
+    st.markdown('- Creating instance of Classification algorithms and fitting with training data.')
+    st.markdown('- Comapring metrics of classification models using Confusion Matrix')
+    st.markdown('- Finally selecting best model with best parameters using GridSearchCV.And Saving that model.')
+    st.write('You can see Python code for Machine Learning [Here](https://github.com/TRGanesh/penguins_classification1/blob/main/penguins_DTClassification.ipynb)')
 st.markdown(''' <style> .font{font-size:30px;
             font-weight:bold;
             font-family:'Copper Black';
