@@ -241,18 +241,14 @@ if selected=='Project':
                 time.sleep(0.0005)
                 progress_bar.progress(percentage_completed+1)
             answer = penguin_classifier([Island,culmen_length_mm,culmen_depth_mm,flipper_length_mm,body_mass_g,sex])
-            st.write('Penguin is classified as')
+            # st.write('Penguin is classified as')
             if answer == 'Gentoo':
                 st.image(Image.open('gentoo_image.png.jpeg'),width=400)
             elif answer == 'Chinstrap':
                 st.image(Image.open('chinstrap_image.png.jpeg'))    
             elif answer == 'Adelie':
                 st.image(Image.open('adelie2_image.png.jpeg'))
-            st.success(f'{answer}',icon="✅")
-        st.write(' ');st.write(' ')
-        st.write(' ');st.write(' ')
-        st.write("[Github Link](https://github.com/TRGanesh/penguins_classification1)")
+            st.success(f'Penguin is classified as {answer}',icon="✅")
         
-
 if __name__ == "__main__":
     main()
