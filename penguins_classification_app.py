@@ -235,10 +235,10 @@ if selected=='Project':
         
         # CREATING A BUTTON,ON CLICKING IT WE WILL BE ABLE TO SEE RESULT AS IMAGE
         if st.button('Result'):
-	    progress_bar = st.progress(0)
-            for percentage_completed in range(100):
-			time.sleep(0.0005)
-			progress_bar.progress(percentage_completed+1)
+	    	progress_bar = st.progress(0)
+            	for percentage_completed in range(100):
+				time.sleep(0.0005)
+				progress_bar.progress(percentage_completed+1)
             answer = penguin_classifier([Island,culmen_length_mm,culmen_depth_mm,flipper_length_mm,body_mass_g,sex])
             # st.write('Penguin is classified as')
             if answer == 'Gentoo':
