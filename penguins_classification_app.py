@@ -142,7 +142,7 @@ if selected=='Data':
     st.write('''Data were collected and made available by Dr. Kristen Gorman and the Palmer Station, Antarctica LTER, a member of the Long Term Ecological Research Network.
     Gorman KB, Williams TD, Fraser WR (2014) Ecological Sexual Dimorphism and Environmental Variability within a Community of Antarctic Penguins (Genus Pygoscelis).''')
     st.dataframe(dataframe_explorer(df),use_container_width=True)
-    st.write('- - -)
+    st.write('- - -')
     # DISPLAYING FEATURES/COLUMNS IN DATASET
     st.markdown("<p class='font'>Features of Data</p>",unsafe_allow_html=True)
     st.write(' ')
