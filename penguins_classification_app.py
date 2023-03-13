@@ -45,7 +45,7 @@ def main():
     local_css('style.css')
     
 # CREATING NAVIGATION BAR WITH OPTION_MENU    
-selected = streamlit_option_menu.option_menu(menu_title=None,options=['Intro','Data','Project'],icons=['house','activity','book'],menu_icon='list',default_index=2,orientation='horizontal',styles={
+selected = streamlit_option_menu.option_menu(menu_title=None,options=['Intro','Data','Project'],icons=['house','activity','book'],menu_icon='list',default_index=0,orientation='horizontal',styles={
             "container": {"padding": "0!important", "background-color": "#white"},
             "icon": {"color": "yellow", "font-size": "25px"}, 
             "nav-link": {"font-size": "25px", "text-align": "middle", "margin":"0px", "--hover-color": "grey"},
