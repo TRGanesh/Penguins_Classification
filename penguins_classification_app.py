@@ -1,6 +1,7 @@
 # IMPORTING REQUIRED LIBRARIES
 import numpy as np
 import pandas as pd
+import time
 import pickle # To load saved Machine Learning model,Scaler,One Hot Encoder
 import streamlit as st
 from streamlit_lottie import st_lottie # Used to import Lottie files
@@ -196,7 +197,7 @@ st.markdown(''' <style> .font{font-size:30px;
 # CREATING A PAGE FOR MODEL PREDICTION    
 if selected=='Project':   
     # TITLE
-    st.title(':blue[Penguins Classification]')
+    st.title(':blue[Penguins Classification] :penguin:')
     
     
     # CONTAINER TO DISPLAY A FORM(TO TAKE INOUTS FROM USER) AND AN IMAGE(OF 3 PENGUINS)
@@ -223,6 +224,10 @@ if selected=='Project':
         
         # CREATING A BUTTON,ON CLICKING IT WE WILL BE ABLE TO SEE RESULT AS IMAGE
         if st.button('Result'):
+	    progress_bar = st.progress(0)
+            for percentage_completed in range(100):
+                time.sleep(0.0005)
+                progress_bar.progress(percentage_completed+1)
             answer = penguin_classifier([Island,culmen_length_mm,culmen_depth_mm,flipper_length_mm,body_mass_g,sex])
             st.write('Penguin is classified as')
             if answer == 'Gentoo':
