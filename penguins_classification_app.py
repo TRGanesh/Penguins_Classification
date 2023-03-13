@@ -28,7 +28,7 @@ st.markdown(streamlit_style, unsafe_allow_html=True)
 # LOADING THE SAVED DECISIONTREE CLASSIFIER MODEL,ONE-HOT ENCODER,SCALER
 loaded_model = pickle.load(open('penguins_DTclassification.sav','rb'))
 loaded_encoder = pickle.load(open('penguins_classification_ohe.sav','rb'))
-loaded_scaler = pickle.load(open('/penguins_classification_scaler.sav','rb'))
+loaded_scaler = pickle.load(open('penguins_classification_scaler.sav','rb'))
 
 # CREATING A FUNCTION THAT MAKES PREDICTION USING LOADED MODEL
 def penguin_classifier(data):
