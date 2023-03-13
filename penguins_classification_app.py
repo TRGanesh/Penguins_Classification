@@ -24,9 +24,9 @@ streamlit_style = """
 st.markdown(streamlit_style, unsafe_allow_html=True)
    
 # LOADING THE SAVED DECISIONTREE CLASSIFIER MODEL,ONE-HOT ENCODER,SCALER
-loaded_model = pickle.load(open('/Users/mac/Downloads/Model_Deployment_1/Penguins_Classification_Streamlit/penguins_DTclassification.sav','rb'))
-loaded_encoder = pickle.load(open('/Users/mac/Downloads/Model_Deployment_1/Penguins_Classification_Streamlit/penguins_classification_ohe.sav','rb'))
-loaded_scaler = pickle.load(open('/Users/mac/Downloads/Model_Deployment_1/Penguins_Classification_Streamlit/penguins_classification_scaler.sav','rb'))
+loaded_model = pickle.load(open('penguins_DTclassification.sav','rb'))
+loaded_encoder = pickle.load(open('penguins_classification_ohe.sav','rb'))
+loaded_scaler = pickle.load(open('/penguins_classification_scaler.sav','rb'))
 
 # CREATING A FUNCTION THAT MAKES PREDICTION USING LOADED MODEL
 def penguin_classifier(data):
@@ -40,7 +40,7 @@ def main():
     def local_css(file_name):
         with open(file_name) as f:
             st.markdown(f'<style>{f.read()}</style>',unsafe_allow_html=True)
-    local_css('/Users/mac/Downloads/Model_Deployment_1/Penguins_Classification_Streamlit/style.css')
+    local_css('style.css')
     
 # CREATING NAVIGATION BAR WITH OPTION_MENU    
 selected = streamlit_option_menu.option_menu(menu_title=None,options=['Home','Data','Project'],icons=['house','activity','book'],menu_icon='list',default_index=2,orientation='horizontal',styles={
@@ -62,7 +62,7 @@ if selected=='Home':
             st.write('''Machine Learning can be defined with many definitions.One way to define it is "The field of study that gives computers the ability to learn without being explicitly programmed".Machine learning is programming computers to optimize a performance criterion using example data or past experience .We have a model defined up to some parameters, and learning is the execution of a computer program to optimize the parameters of the model using the training data or past experience.''')
             st.write("There are several types of machine learning, including supervised learning, unsupervised learning, and reinforcement learning.Supervised learning involves training a model on labeled data, while unsupervised learning involves training a model on unlabeled data. Reinforcement learning involves training a model through trial and error.Machine learning is used in a wide variety of applications, including image and speech recognition, natural language processing, and recommender systems.")
         with image_column:
-            st.image(Image.open('/Users/mac/Downloads/Model_Deployment_1/Penguins_Classification_Streamlit/ml_image.png.jpeg'),width=500) 
+            st.image(Image.open('ml_image.png.jpeg'),width=500) 
             
     # CONTAINER TO DISPLAY TEXT AND IMAGE ABOUT BRIEF INTRO OF REGRESSION           
     with st.container():
@@ -71,7 +71,7 @@ if selected=='Home':
         st.write('   ')
         image_column,text_column = st.columns(2)
         with image_column:
-            st.image(Image.open('/Users/mac/Downloads/Model_Deployment_1/Penguins_Classification_Streamlit/regression.png'),width=400)   
+            st.image(Image.open('regression.png'),width=400)   
         with text_column:   
             st.write(' ')
             st.write(' ')
@@ -94,7 +94,7 @@ if selected=='Home':
         with col2:     
             st.write(' ')
             st.write(' ')  
-            st.image(Image.open('/Users/mac/Downloads/Model_Deployment_1/Penguins_Classification_Streamlit/types_regression.png.webp'),width=600) 
+            st.image(Image.open('types_regression.png.webp'),width=600) 
         with col3:
             st.write('  ') 
             
@@ -105,7 +105,7 @@ if selected=='Home':
         st.write('   ')
         image_column,text_column = st.columns(2)
         with image_column:
-            st.image(Image.open('/Users/mac/Downloads/Model_Deployment_1/Penguins_Classification_Streamlit/classification.png'))
+            st.image(Image.open('classification.png'))
         with text_column:
             st.write('''In Machine Learning, Classification is a predictive modeling problem where the class label is anticipated for a specific example of input data. For example, in determining handwriting characters, identifying spam, and so on, the classification requires training data with a large number of datasets of input and output.''')
             st.subheader(':orange[Binary classification]')
@@ -123,14 +123,14 @@ if selected=='Home':
         with col1:
             st.write('')
         with col2:       
-            st.image(Image.open('/Users/mac/Downloads/Model_Deployment_1/Penguins_Classification_Streamlit/types_Classification.png'),width=600) 
+            st.image(Image.open('types_Classification.png'),width=600) 
         with col3:
             st.write('')      
     st.write('- - -')
 
 # CREATING A PAGE TO GIVE INFORMATION ABOUT OUR PROJECT
 # LOADING DATASET WITH PANDAS
-df = pd.read_csv('/Users/mac/Downloads/Model_Deployment_1/Penguins_Classification_Streamlit/penguins_df.csv')
+df = pd.read_csv('penguins_df.csv')
 
 # CREATING PAGE FOR DATA DESCRIPTION
 if selected=='Data':
@@ -160,15 +160,15 @@ if selected=='Data':
         adelie_image,chinstrap_image,gentoo_image = st.columns((1,1,1))
         with adelie_image:
             st.write(' ')
-            st.image(Image.open('/Users/mac/Downloads/Model_Deployment_1/Penguins_Classification_Streamlit/adelie_image.png.jpeg'))
+            st.image(Image.open('adelie_image.png.jpeg'))
             st.subheader(':green[Adelie Penguin]')
         with chinstrap_image:
             st.write(' ')
-            st.image(Image.open('/Users/mac/Downloads/Model_Deployment_1/Penguins_Classification_Streamlit/chinstrap_image.png.jpeg')) 
+            st.image(Image.open('chinstrap_image.png.jpeg')) 
             st.subheader(':green[Chinstrap Penguin]')
         with gentoo_image:
             st.write(' ')
-            st.image(Image.open('/Users/mac/Downloads/Model_Deployment_1/Penguins_Classification_Streamlit/gentoo_image.png.jpeg'),width=400)
+            st.image(Image.open('gentoo_image.png.jpeg'),width=400)
             st.subheader(':green[Gentoo Penguin]')       
         st.write('- - -')
         
@@ -177,12 +177,12 @@ if selected=='Data':
         culmen_column,flipper_column = st.columns(2)
         with culmen_column:
             st.write(' ')
-            st.image(Image.open('/Users/mac/Downloads/Model_Deployment_1/Penguins_Classification_Streamlit/culmen_length_depth.png.jpeg'))
+            st.image(Image.open('culmen_length_depth.png.jpeg'))
             st.subheader(':green[Culmen Length,Culmen_depth]')
             st.write("Culmen is the upper ridge of the Penguin's bill(beak).In above image,we can see how the culmen length and culmen depth")
         with flipper_column:
             st.write(' ')
-            st.image(Image.open('/Users/mac/Downloads/Model_Deployment_1/Penguins_Classification_Streamlit/flipper_len.png.jpeg'),width=320)
+            st.image(Image.open('flipper_len.png.jpeg'),width=320)
             st.subheader(':green[Flipper Length]')
             st.write("Flipper's are wings of penguins.In above image,we can see how the flipper length is measured")
     st.write('- - -')
@@ -215,7 +215,7 @@ if selected=='Project':
             st.write(' ');st.write(' ');st.write(' ')
             st.write(' ');st.write(' ');st.write(' ')
             st.write(' ');st.write(' ');st.write(' ')
-            st.image(Image.open('/Users/mac/Downloads/Model_Deployment_1/Penguins_Classification_Streamlit/3_penguins.png.jpeg'))
+            st.image(Image.open('3_penguins.png.jpeg'))
         
         # DISPLAYING RESULT OUTSIDE OF CONTAINER
         st.markdown("<p class='font'>Model Prediction</p>",unsafe_allow_html=True)
@@ -226,15 +226,15 @@ if selected=='Project':
             answer = penguin_classifier([Island,culmen_length_mm,culmen_depth_mm,flipper_length_mm,body_mass_g,sex])
             st.write('Penguin is classified as')
             if answer == 'Gentoo':
-                st.image(Image.open('/Users/mac/Downloads/Model_Deployment_1/Penguins_Classification_Streamlit/gentoo_image.png.jpeg'),width=400)
+                st.image(Image.open('gentoo_image.png.jpeg'),width=400)
             elif answer == 'Chinstrap':
-                st.image(Image.open('/Users/mac/Downloads/Model_Deployment_1/Penguins_Classification_Streamlit/chinstrap_image.png.jpeg'))    
+                st.image(Image.open('chinstrap_image.png.jpeg'))    
             elif answer == 'Adelie':
-                st.image(Image.open('/Users/mac/Downloads/Model_Deployment_1/Penguins_Classification_Streamlit/adelie2_image.png.jpeg'))
+                st.image(Image.open('adelie2_image.png.jpeg'))
             st.success(f'{answer}',icon="✅")
         st.write(' ');st.write(' ')
         st.write(' ');st.write(' ')
-        st.write("[Github Link](https://github.com/TRGanesh)")
+        st.write("[Github Link](https://github.com/TRGanesh/penguins_classification1)")
         
 
 if __name__ == "__main__":
