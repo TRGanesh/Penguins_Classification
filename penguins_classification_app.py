@@ -220,10 +220,10 @@ if selected=='Make Prediction':
         with left_column:
             # GETTING DATA FROM USER
             Island = st.selectbox("**Island**",['Biscoe','Dream','Torgersen'],key='island')	
-            culmen_length_mm = st.text_input("**Culmen Length**",placeholder='Enter culmen length(in mm)')
-            culmen_depth_mm	= st.text_input('**Culmen Depth**',placeholder='Enter culmen depth(in mm)')
-            flipper_length_mm = st.text_input('**Flipper Length**',placeholder='Enter flipper length(in mm)')
-            body_mass_g	= st.text_input('**Body Mass**',placeholder='Enter body mass(in grams)')
+            culmen_length_mm = st.slider('**Culmen Length(in mm)**',df['culmen_length_mm'].min(),df['culmen_length_mm'].max())
+            culmen_depth_mm	= st.slider('**Culmen Depth(in mm)**',df['culmen_depth_mm'].min(),df['culmen_depth_mm'].max())
+            flipper_length_mm = st.slider('**Flipper Length(in mm)**',df['flipper_length_mm'].min(),df['flipper_length_mm'].max())
+            body_mass_g	= st.slider('**Body Mass (in grams)**',df['body_mass_g'].min(),df['body_mass_g'].max())
             sex = st.selectbox('**Sex**',['FEMALE','MALE'],key='sex')       
         with right_column:
             st.write(' ');st.write(' ');st.write(' ')
