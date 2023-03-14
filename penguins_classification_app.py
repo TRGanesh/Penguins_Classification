@@ -189,7 +189,7 @@ if selected=='Data':
             st.subheader(':green[Flipper Length]')
             st.write("Flipper's are wings of penguins.In above image,we can see how the flipper length is measured")
     st.write('- - -')
-    st.markdown("<p class='font'>Procedure Followed</p>",unsafe_allow_html=True)
+    st.markdown("<p class='font'>Steps Followed</p>",unsafe_allow_html=True)
     st.write("On taking features of Penguin that are Island,Culmen Length,Culmen Depth,Flipper Length,Body Mass,Sex of Penguin,,biologists had found Penguin's species.We have predefined data about features of penguin and their species.I build a Machine Learning Classification model using Decision Tree Algorithm.")        
     st.markdown('- First,I downloaded the dataset and loaded it in,by using Pandas.')
     st.markdown('- Using Python Libraries Numpy,Matplotlib and Seaborn,I did data exploration,made some interactive plots using Plotly.')
