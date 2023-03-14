@@ -244,7 +244,7 @@ if selected=='Make Prediction':
             elif answer == 'Chinstrap':
                 st.image(Image.open('chinstrap_image.png.jpeg'))    
             elif answer == 'Adelie':
-                st.image(Image.open('adelie2_image.png.jpeg'))
+                st.image(Image.open('adelie_image.png.jpeg'))
             st.success(f'Penguin is classified as {answer}',icon="✅")
         
 if __name__ == "__main__":
