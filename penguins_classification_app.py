@@ -220,10 +220,10 @@ if selected=='Make Prediction':
         with left_column:
             # GETTING DATA FROM USER
             Island = st.selectbox("**Island**",['Biscoe','Dream','Torgersen'],key='island')	
-            culmen_length_mm = st.slider('**Culmen Length(in mm)**',70,100)
-            culmen_depth_mm = st.slider('**Culmen Depth(in mm)**',df['culmen_depth_mm'].min(),df['culmen_depth_mm'].max())
-            flipper_length_mm = st.slider('**Flipper Length(in mm)**',df['flipper_length_mm'].min(),df['flipper_length_mm'].max())
-            body_mass_g	= st.slider('**Body Mass (in grams)**',df['body_mass_g'].min(),df['body_mass_g'].max())
+            culmen_length_mm = st.slider('**Culmen Length(in mm)**',32.1,59.6)
+            culmen_depth_mm = st.slider('**Culmen Depth(in mm)**',13.5,21.5)
+            flipper_length_mm = st.slider('**Flipper Length(in mm)**',172,231.)
+            body_mass_g	= st.slider('**Body Mass (in grams)**',2700,6300)
             sex = st.selectbox('**Sex**',['FEMALE','MALE'],key='sex')       
         with right_column:
             st.write(' ');st.write(' ');st.write(' ')
