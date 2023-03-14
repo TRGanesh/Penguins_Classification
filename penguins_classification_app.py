@@ -171,7 +171,7 @@ if selected=='Data':
             st.subheader(':green[Chinstrap Penguin]')
         with gentoo_image:
             st.write(' ')
-            st.image(Image.open('gentoo_image.png.jpeg'))
+            st.image(Image.open('gentoo_image.png.jpeg'),width=300)
             st.subheader(':green[Gentoo Penguin]')       
         st.write('- - -')
         
