@@ -180,7 +180,7 @@ if selected=='Data':
         culmen_column,flipper_column = st.columns(2)
         with culmen_column:
             st.write(' ')
-            st.image(Image.open('culmen_length_depth.png.jpeg'),width=500)
+            st.image(Image.open('culmen_length_depth.png.jpeg'),width=520)
             st.subheader(':green[Culmen Length,Culmen_depth]')
             st.write("Culmen is the upper ridge of the Penguin's bill(beak).In above image,we can see how the culmen length and culmen depth")
         with flipper_column:
