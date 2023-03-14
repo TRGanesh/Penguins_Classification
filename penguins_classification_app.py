@@ -221,8 +221,8 @@ if selected=='Make Prediction':
             # GETTING DATA FROM USER
             Island = st.selectbox("**Island**",['Biscoe','Dream','Torgersen'],key='island')	
             culmen_length_mm = st.slider('**Culmen Length(in mm)**',32.0,60.0)
-            culmen_depth_mm = st.slider('**Culmen Depth(in mm)**',13,25)
-            flipper_length_mm = st.slider('**Flipper Length(in mm)**',172,231)
+            culmen_depth_mm = st.slider('**Culmen Depth(in mm)**',13.0,25.0)
+            flipper_length_mm = st.slider('**Flipper Length(in mm)**',172.0,231.0)
             body_mass_g	= st.slider('**Body Mass (in grams)**',2700,6300)
             sex = st.selectbox('**Sex**',['FEMALE','MALE'],key='sex')       
         with right_column:
