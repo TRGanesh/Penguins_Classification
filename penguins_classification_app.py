@@ -61,7 +61,7 @@ if selected=='Intro':
         with text_column:
             st.header(':blue[Brief Introduction about Machine Learning]')
             st.write('''Machine Learning can be defined with many definitions.One way to define it is "The field of study that gives computers the ability to learn without being explicitly programmed".Machine learning is programming computers to optimize a performance criterion using example data or past experience .We have a model defined up to some parameters, and learning is the execution of a computer program to optimize the parameters of the model using the training data or past experience.''')
-            st.write("There are several types of machine learning, including **supervised learning**, **unsupervised learning**, and **reinforcement learning**.Supervised learning involves training a model on labeled data, while unsupervised learning involves training a model on unlabeled data. Reinforcement learning involves training a model through trial and error.Machine learning is used in a wide variety of applications, including image and speech recognition, natural language processing, and recommender systems.")
+            st.write("There are several types of machine learning, including **Supervised Learning**, **Unsupervised Learning**, and **Reinforcement Learning**.Supervised learning involves training a model on labeled data, while unsupervised learning involves training a model on unlabeled data. Reinforcement learning involves training a model through trial and error.Machine learning is used in a wide variety of applications, including **Image and Speech Recognition**, **Natural Language Processing**, and **Recommender Systems**.")
         with image_column:
             st.image(Image.open('ml_image.png.jpeg'),width=500) 
             
@@ -147,13 +147,13 @@ if selected=='Data':
     # DISPLAYING FEATURES/COLUMNS IN DATASET
     st.markdown("<p class='font'>Features of Data</p>",unsafe_allow_html=True)
     st.write(' ')
-    st.markdown('- Species : penguin species (Chinstrap, Adelie, or Gentoo)')
-    st.markdown('- Island :  island name (Dream, Torgersen, or Biscoe) in the Palmer Archipelago (Antarctica)')
-    st.markdown('- Culmen Length (in mm)')
-    st.markdown('- Culmen Depth (in mm)')
-    st.markdown('- Flipper Length (in mm)')
-    st.markdown('- Body Mass (in grams)')  
-    st.markdown('- Sex')  
+    st.markdown('- Species : Species of Penguin either Adelie or Chinstrap or Gentoo.Images of those different species is displayed below.')
+    st.markdown('- Island : Name of Island either Dream or Torgersen or Biscoe in the Palmer Archipelago (Antarctica).')
+    st.markdown('- Culmen Length (in mm) : Culmen Length of Penguin.')
+    st.markdown('- Culmen Depth (in mm) : Culmen Depth of Penguin.')
+    st.markdown('- Flipper Length (in mm) : Flipper Length of Penguin')
+    st.markdown('- Body Mass (in grams) : Body Mass of Penguin')  
+    st.markdown('- Sex : Sex of Penguin')  
     st.write('- - -')
     
     # DISPLAYING IMAGES OF DIFFERENT SPECIES OF PENGUINS 
@@ -190,15 +190,16 @@ if selected=='Data':
             st.write("Flipper's are wings of penguins.In above image,we can see how the flipper length is measured")
     st.write('- - -')
     st.markdown("<p class='font'>Procedure Followed</p>",unsafe_allow_html=True)
-    st.write('On taking features of Penguin that are Island,Culmen Length,Culmen Depth,Flipper Length,Body Mass,Sex of Penguin,,biologists had found their species.We have predefined data about features of penguin and their species.I build a Machine Learning Classification model using Decision Tree Algorithm.In Prediction page,you can give inputs and see the prediction.')        
-    st.markdown('- I downloaded the dataset and loaded it in,by using Pandas.')
+    st.write("On taking features of Penguin that are Island,Culmen Length,Culmen Depth,Flipper Length,Body Mass,Sex of Penguin,,biologists had found Penguin's species.We have predefined data about features of penguin and their species.I build a Machine Learning Classification model using Decision Tree Algorithm.")        
+    st.markdown('- First,I downloaded the dataset and loaded it in,by using Pandas.')
     st.markdown('- Using Python Libraries Numpy,Matplotlib and Seaborn,I did data exploration,made some interactive plots using Plotly.')
     st.markdown('- Importing required libraries from Scikit Learn Library.')
     st.markdown("- Splitting the dataset's features(X) and target(y) into training and testing data.")
     st.markdown('- Data Preprocessing that involves encoding the categorical features and scaling all features.')       
     st.markdown('- Creating instance of Classification algorithms and fitting with training data.')
-    st.markdown('- Comapring metrics of classification models using Confusion Matrix')
+    st.markdown('- Comparing metrics of classification models using Confusion Matrix')
     st.markdown('- Finally selecting best model with best parameters using GridSearchCV.And Saving that model.')
+    st.write('In Prediction page,you can give inputs and see the prediction.')
     st.write('You can see Python code for Machine Learning [Here](https://github.com/TRGanesh/penguins_classification1/blob/main/penguins_DTClassification.ipynb)')
     st.write('You can see Python code for Streamlit web page [Here](https://github.com/TRGanesh/penguins_classification1/blob/main/penguins_classification_app.py)')
 st.markdown(''' <style> .font{font-size:30px;font-weight:bold;
