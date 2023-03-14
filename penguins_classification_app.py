@@ -138,6 +138,8 @@ if selected=='Data':
     # TITLE
     st.title(':blue[Palmer Penguins Dataset]')
     #st.write(df.sample(250,ignore_index=True)
+    df.dropna(subset=['sex'],axis=0,inplace=True)
+    df = df.drop(336,axis=0)
     st.write('''Data were collected and made available by Dr. Kristen Gorman and the Palmer Station, Antarctica LTER, a member of the Long Term Ecological Research Network.
     Gorman KB, Williams TD, Fraser WR (2014) Ecological Sexual Dimorphism and Environmental Variability within a Community of Antarctic Penguins (Genus Pygoscelis).''')
     st.dataframe(dataframe_explorer(df),use_container_width=True)
