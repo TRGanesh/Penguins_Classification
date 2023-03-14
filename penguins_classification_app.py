@@ -24,7 +24,6 @@ streamlit_style = """
 			</style>
 			"""
 st.markdown(streamlit_style, unsafe_allow_html=True)
-   
 # LOADING THE SAVED DECISIONTREE CLASSIFIER MODEL,ONE-HOT ENCODER,SCALER
 loaded_model = pickle.load(open('penguins_DTclassification.sav','rb'))
 loaded_encoder = pickle.load(open('penguins_classification_ohe.sav','rb'))
@@ -45,7 +44,7 @@ def main():
     local_css('style.css')
     
 # CREATING NAVIGATION BAR WITH OPTION_MENU    
-selected = streamlit_option_menu.option_menu(menu_title=None,options=['Intro','Data','Project'],icons=['house','activity','book'],menu_icon='list',default_index=0,orientation='horizontal',styles={
+selected = streamlit_option_menu.option_menu(menu_title=None,options=['Intro','Data','Make Prediction'],icons=['house','activity','book'],menu_icon='list',default_index=0,orientation='horizontal',styles={
             "container": {"padding": "0!important", "background-color": "#white"},
             "icon": {"color": "yellow", "font-size": "25px"}, 
             "nav-link": {"font-size": "25px", "text-align": "middle", "margin":"0px", "--hover-color": "grey"},
@@ -206,7 +205,7 @@ st.markdown(''' <style> .font{font-size:30px;font-weight:bold;
         
 
 # CREATING A PAGE FOR MODEL PREDICTION    
-if selected=='Project':   
+if selected=='Make Prediction':   
     # TITLE
     st.title(':blue[Penguins Classification] :penguin:')
     
