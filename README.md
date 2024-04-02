@@ -90,10 +90,31 @@ Our goal is to create a model that can help predict a species of a penguin based
 
 <img width="891" alt="Screenshot 2024-04-01 at 12 01 44 PM" src="https://github.com/TRGanesh/Penguins_Classification_Project/assets/117368449/6779e824-111c-492d-8d80-d2c389951bb5">
 
-### Trained Decision Tree Structure
+### Decision Tree Model's Structure
 
 <img width="863" alt="Screenshot 2024-04-01 at 12 00 24 PM" src="https://github.com/TRGanesh/Penguins_Classification_Project/assets/117368449/53680db4-8be9-4c8d-a80d-d9d2380f1b73">
 
 - Files such as Scaler, One Hot Encoder, Final Model are Saved using Pickle Module
 ---
 ### Streamlit WebApp
+- Streamlit is a Python Library used for Building Interactive Web Applications.
+- Streamlit supports various Types of Visualizations, including Charts, Maps, and Custom Widgets, enhancing the User Experience and enabling Effective Communication of Insights.
+**Steps followed for Streamlit Web App in Python Script**
+- Importing neccessary libraries such as Streamlit, Pickle
+- Setting Page Configurations such as setting Title, Layout
+- Loading Machine Learning Files which includes Encoder, Scaler, Model
+- Created a Container which contains a Form to give Inputs
+
+<img width="1023" alt="Screenshot 2024-04-02 at 11 20 08 PM" src="https://github.com/TRGanesh/Penguins_Classification_Project/assets/117368449/b44c9eeb-1cb7-49a5-8fba-e402d21a1ec1">
+
+<img width="1024" alt="Screenshot 2024-04-02 at 11 20 55 PM" src="https://github.com/TRGanesh/Penguins_Classification_Project/assets/117368449/0052b9fa-6396-4af2-a851-68dcdd996aae">
+
+<img width="1024" alt="Screenshot 2024-04-02 at 11 21 44 PM" src="https://github.com/TRGanesh/Penguins_Classification_Project/assets/117368449/4b630d50-8c47-4478-9032-39ded061a351">
+
+<img width="1024" alt="Screenshot 2024-04-02 at 11 24 36 PM" src="https://github.com/TRGanesh/Penguins_Classification_Project/assets/117368449/e9d9a245-bce4-4568-9039-b763ad1be083">
+
+<img width="1024" alt="Screenshot 2024-04-02 at 11 25 00 PM" src="https://github.com/TRGanesh/Penguins_Classification_Project/assets/117368449/e2dac373-bcc9-480b-bba5-5bc9dc4afbaa">
+
+
+
+
